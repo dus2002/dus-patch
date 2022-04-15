@@ -38,9 +38,12 @@ DEPEND="${RDEPEND}
 	>=kde-frameworks/ktextwidgets-${KFMIN}:5
 "
 
+PATCHES="${FILESDIR}/Defuse-Root-Protection.patch
+"
+
 src_prepare() {
 	ecm_src_prepare
-	eapply_user
+	eapply_patch
 	# delete colliding kate translations
 	if [[ ${KDE_BUILD_TYPE} = release ]]; then
 		find po -type f -name "*po" -and -not -name "kwrite*" -delete || die
