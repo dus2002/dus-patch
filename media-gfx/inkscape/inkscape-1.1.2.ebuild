@@ -4,7 +4,7 @@
 EAPI=8
 
 PYTHON_COMPAT=(python3_{8..10} )
-EPYTHON=${PYTHON_SINGLE_TARGET}
+EPYTHON="/usr/bin/python"
 PYTHON_REQ_USE="xml"
 MY_P="${P/_/}"
 inherit cmake flag-o-matic xdg toolchain-funcs python-single-r1
