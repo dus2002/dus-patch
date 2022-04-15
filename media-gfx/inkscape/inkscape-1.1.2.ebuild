@@ -106,6 +106,7 @@ S="${WORKDIR}/${MY_P}"
 PATCHES=(
 	"${FILESDIR}/${PN}-1.1.2-poppler-22.03.0.patch"  # bug 835424
 	"${FILESDIR}/K-NO-POPPLER-CONIO.patch"
+	"${FILESDIR}/pasas-k-cosan.patch"
 )
 
 pkg_pretend() {
