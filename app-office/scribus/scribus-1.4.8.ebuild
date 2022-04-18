@@ -69,40 +69,9 @@ BDEPEND="
 	virtual/pkgconfig
 "
 
-#PATCHES=(
-	# non(?)-upstreamable
-	"${FILESDIR}"/${PN}-1.5.3-fpic.patch
-	"${FILESDIR}"/${PN}-1.5.6-docdir.patch
-	"${FILESDIR}"/${PN}-1.5.8-findhyphen-1.patch
-	"${FILESDIR}"/${PN}-1.5.6-findhyphen.patch
-	"${FILESDIR}"/${PN}-1.5.8-poppler-22.2.0-1.patch
-	"${FILESDIR}"/${PN}-1.5.8-poppler-22.2.0-2.patch
-	"${FILESDIR}"/${PN}-1.5.8-poppler-22.03.0.patch # bug 834537
-#)
-
 CMAKE_BUILD_TYPE="Release"
 
 S="${WORKDIR}/${P}"
-
-src_prepare() {
-	cmake_src_prepare
-
-	rm -r codegen/cheetah scribus/third_party/hyphen || die
-
-	sed \
-		-e "/^\s*unzip\.[ch]/d" \
-		-e "/^\s*ioapi\.[ch]/d" \
-		-i scribus/CMakeLists.txt Scribus.pro || die
-	rm scribus/ioapi.[ch] || die
-
-	sed \
-		-e 's:\(${CMAKE_INSTALL_PREFIX}\):./\1:g' \
-		-i resources/templates/CMakeLists.txt || die
-
-	sed \
-		-e "/^add_subdirectory(ui\/qml)/s/^/#DONT/" \
-		-i scribus/CMakeLists.txt || die # nothing but a bogus Hello World test
-}
 
 src_configure() {
 	# bug #550818
