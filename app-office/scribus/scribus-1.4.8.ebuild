@@ -69,7 +69,7 @@ BDEPEND="
 	virtual/pkgconfig
 "
 
-PATCHES=(
+#PATCHES=(
 	# non(?)-upstreamable
 	"${FILESDIR}"/${PN}-1.5.3-fpic.patch
 	"${FILESDIR}"/${PN}-1.5.6-docdir.patch
@@ -78,7 +78,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-1.5.8-poppler-22.2.0-1.patch
 	"${FILESDIR}"/${PN}-1.5.8-poppler-22.2.0-2.patch
 	"${FILESDIR}"/${PN}-1.5.8-poppler-22.03.0.patch # bug 834537
-)
+#)
 
 CMAKE_BUILD_TYPE="Release"
 
