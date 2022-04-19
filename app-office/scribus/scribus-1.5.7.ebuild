@@ -73,8 +73,6 @@ PATCHES=(
 	# non(?)-upstreamable
 	"${FILESDIR}"/${PN}-1.5.3-fpic.patch
 	"${FILESDIR}"/${PN}-1.5.6-docdir.patch
-	"${FILESDIR}"/${PN}-1.5.8-findhyphen-1.patch
-	"${FILESDIR}"/${PN}-1.5.6-findhyphen.patch
 )
 
 CMAKE_BUILD_TYPE="Release"
@@ -84,7 +82,7 @@ S="${WORKDIR}/${P}"
 src_prepare() {
 	cmake_src_prepare
 
-	rm -r codegen/cheetah scribus/third_party/hyphen || die
+	rm -r codegen/cheetah || die
 
 	sed \
 		-e "/^\s*unzip\.[ch]/d" \
