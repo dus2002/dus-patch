@@ -75,9 +75,6 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-1.5.6-docdir.patch
 	"${FILESDIR}"/${PN}-1.5.8-findhyphen-1.patch
 	"${FILESDIR}"/${PN}-1.5.6-findhyphen.patch
-	"${FILESDIR}"/${PN}-1.5.8-poppler-22.2.0-1.patch
-	"${FILESDIR}"/${PN}-1.5.8-poppler-22.2.0-2.patch
-	"${FILESDIR}"/${PN}-1.5.8-poppler-22.03.0.patch # bug 834537
 )
 
 CMAKE_BUILD_TYPE="Release"
