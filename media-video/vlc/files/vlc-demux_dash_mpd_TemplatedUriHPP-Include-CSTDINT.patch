@@ -1,0 +1,10 @@
+--- a/modules/demux/dash/mpd/TemplatedUri.hpp	2022-06-26 16:08:11.448772311 +0200
++++ b/modules/demux/dash/mpd/TemplatedUri.hpp	2022-06-26 16:20:44.988533413 +0200
+@@ -22,6 +22,7 @@
+ #define TEMPLATEDURI_HPP
+ 
+ #include <string>
++#include <cstdint>
+ 
+ namespace dash
+ {

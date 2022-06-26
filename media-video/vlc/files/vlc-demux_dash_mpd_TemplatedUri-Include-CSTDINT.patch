@@ -1,0 +1,9 @@
+--- a/modules/demux/dash/mpd/TemplatedUri.cpp	2022-06-26 15:46:05.567930909 +0200
++++ b/modules/demux/dash/mpd/TemplatedUri.cpp	2022-06-26 16:03:09.051922281 +0200
+@@ -26,6 +26,7 @@
+ 
+ #include <cctype>
+ #include <sstream>
++#include <cstdint>
+ 
+ using namespace dash::mpd;
